@@ -1,0 +1,25 @@
+# ERROR: No extended dataflow license exists
+# vsim -work work tb_led_button 
+# Start time: 17:11:35 on Jan 21,2026
+# Loading sv_std.std
+# Loading work.tb_led_button
+# Loading work.led_button
+# Loading work.debounce
+add wave -position insertpoint  \
+sim:/tb_led_button/clk \
+sim:/tb_led_button/rst_n \
+sim:/tb_led_button/btn_i \
+sim:/tb_led_button/led
+add wave -position insertpoint  \
+sim:/tb_led_button/dut/debounce_inst/signal_out \
+sim:/tb_led_button/dut/debounce_inst/counter \
+sim:/tb_led_button/dut/debounce_inst/sync_ff_1
+restart
+run -all
+# Simulasyon bitti!
+# ** Note: $finish    : tb/tb_led_button.sv(50)
+#    Time: 700000010 ns  Iteration: 0  Instance: /tb_led_button
+# 1
+# Break in Module tb_led_button at tb/tb_led_button.sv line 50
+# End time: 17:15:08 on Jan 21,2026, Elapsed time: 0:03:33
+# Errors: 0, Warnings: 0

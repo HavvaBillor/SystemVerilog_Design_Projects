@@ -1,0 +1,111 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/subat/SystemVerilog_Projects/project_002
+vdebounce
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1769004692
+!i10b 1
+!s100 Gb0KTK7k`==mg`I@fUzdN3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IcTQT;kWI0?^_fTL1VUjX<0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1769001063
+8rtl/debounce.sv
+Frtl/debounce.sv
+!i122 2
+L0 1 48
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1769004692.000000
+Z7 !s107 rtl/led_button.sv|rtl/led_blink.sv|rtl/debounce.sv|
+Z8 !s90 -work|work|rtl/debounce.sv|rtl/led_blink.sv|rtl/led_button.sv|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vled_blink
+R1
+R2
+!i10b 1
+!s100 XLN5>`_`Om<Bl:LI_;3Oz3
+R3
+Ii`HMa6?jhDUHJ1TXc=BP50
+R4
+S1
+R0
+w1768994350
+8rtl/led_blink.sv
+Frtl/led_blink.sv
+!i122 2
+L0 1 32
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+vled_button
+R1
+R2
+!i10b 1
+!s100 KD:8kk0>OLV=h0kzN9eg]0
+R3
+Ib_NV1dhhog2WUEO8eWflU1
+R4
+S1
+R0
+w1769000171
+8rtl/led_button.sv
+Frtl/led_button.sv
+!i122 2
+L0 1 51
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+vtb_led_button
+R1
+R2
+!i10b 1
+!s100 mD[<dX5`QTWd4cSWiM7oN1
+R3
+Im4S`c<z9VBIIX`3A:GF_63
+R4
+S1
+R0
+w1769004687
+8tb/tb_led_button.sv
+Ftb/tb_led_button.sv
+!i122 3
+L0 3 52
+R5
+r1
+!s85 0
+31
+R6
+!s107 tb/tb_led_button.sv|
+!s90 -work|work|tb/tb_led_button.sv|
+!i113 1
+R9
+R10
