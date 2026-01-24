@@ -1,0 +1,27 @@
+# ERROR: No extended dataflow license exists
+# vsim -work work tb_pwm 
+# Start time: 22:13:22 on Jan 24,2026
+# Loading sv_std.std
+# Loading work.tb_pwm
+# Loading work.pwm_gen
+add wave -position insertpoint  \
+sim:/tb_pwm/CLK_PERIOD \
+sim:/tb_pwm/PWM_FREQ \
+sim:/tb_pwm/PWM_PERIOD_NS \
+sim:/tb_pwm/clk \
+sim:/tb_pwm/rst_n \
+sim:/tb_pwm/duty_cycle \
+sim:/tb_pwm/pwm_out
+run -all
+# Testing 25% duty cycle...
+# Testing 50% duty cycle...
+# Testing 75% duty cycle...
+# Testing 100% and above duty cycle...
+# Testing 100% duty cycle...
+# Testing 110% duty cycle...
+# ** Note: $finish    : tb/tb_pwm.sv(63)
+#    Time: 25000100 ns  Iteration: 0  Instance: /tb_pwm
+# 1
+# Break in Module tb_pwm at tb/tb_pwm.sv line 63
+# End time: 22:15:05 on Jan 24,2026, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 0
