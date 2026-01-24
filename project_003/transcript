@@ -1,0 +1,55 @@
+# vsim -c -work work tb_stopwatch -do "vcd file wave.vcd; vcd add -r /*; run -all; quit" 
+# Start time: 14:08:20 on Jan 24,2026
+# Loading sv_std.std
+# Loading work.tb_stopwatch
+# Loading work.stopwatch_core
+# Loading work.debounce
+# vcd file wave.vcd
+#  vcd add -r /*
+#  run -all
+# ** Info: INFO: --- Simulation Started ---
+#    Time: 0 ps  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 37
+# ** Info: INFO: Hardware reset is successful.
+#    Time: 1100200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 53
+# ** Info: INFO: TEST 1 - Checking Manual Reset
+#    Time: 1100200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 56
+# ** Info: INFO: START button is pressed...
+#    Time: 1100200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: RESET button is pressed...
+#    Time: 9200200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: [PASS] Manual reset cleared the system successfully.
+#    Time: 12400200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 62
+# ** Info: INFO: TEST 2 - Checking Automatic Reset after 5th stop
+#    Time: 12400200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 66
+# ** Info: INFO: START button is pressed...
+#    Time: 12400200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: STOP 1 button is pressed...
+#    Time: 15500200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: START button is pressed...
+#    Time: 18600200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: STOP 2 button is pressed...
+#    Time: 21700200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: START button is pressed...
+#    Time: 24800200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: STOP 3 button is pressed...
+#    Time: 27900200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: START button is pressed...
+#    Time: 31000200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: STOP 4 button is pressed...
+#    Time: 34100200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: [PASS] All 4 LEDs are ON after 4 laps.
+#    Time: 37200200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 76
+# ** Info: INFO: Final Step - System should go to IDLE on 5th button press.
+#    Time: 37200200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 80
+# ** Info: INFO: START button is pressed...
+#    Time: 37200200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: STOP 5 (RESET) button is pressed...
+#    Time: 40300200 ns  Scope: tb_stopwatch.push_button File: tb/tb_stopwatch.sv Line: 28
+# ** Info: INFO: [SUCCESS] System reset successfully on 5th stop.
+#    Time: 44400200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 85
+# ** Info: INFO: --- All Tests Completed ---
+#    Time: 44400200 ns  Scope: tb_stopwatch File: tb/tb_stopwatch.sv Line: 88
+# ** Note: $finish    : tb/tb_stopwatch.sv(89)
+#    Time: 44400200 ns  Iteration: 0  Instance: /tb_stopwatch
+# End time: 14:08:48 on Jan 24,2026, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 0

@@ -1,0 +1,5 @@
+*.vcd
+*.wdb
+*.log
+/work
+/xsim.dir

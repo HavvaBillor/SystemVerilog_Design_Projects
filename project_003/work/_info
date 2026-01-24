@@ -1,0 +1,161 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/subat/SystemVerilog_Projects/project_003
+vbcd_to_sevenseg
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1769252900
+!i10b 1
+!s100 eWT[=eSV@`XP86Y`eR?P01
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5QCUVZljPHY4O7`c>XKQU3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1769209844
+8rtl/bcd_to_sevenseg.sv
+Frtl/bcd_to_sevenseg.sv
+!i122 0
+L0 1 33
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1769252900.000000
+Z7 !s107 rtl/top.sv|rtl/stopwatch_core.sv|rtl/display_controller.sv|rtl/debounce.sv|rtl/bcd_to_sevenseg.sv|
+Z8 !s90 -work|work|rtl/bcd_to_sevenseg.sv|rtl/debounce.sv|rtl/display_controller.sv|rtl/stopwatch_core.sv|rtl/top.sv|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vdebounce
+R1
+R2
+!i10b 1
+!s100 V<zRaElzZl@F==Q7ZgW@U0
+R3
+ISz=?6C8gZk:[E>e:f8KMM0
+R4
+S1
+R0
+w1769209855
+8rtl/debounce.sv
+Frtl/debounce.sv
+!i122 0
+L0 2 139
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+vdisplay_controller
+R1
+R2
+!i10b 1
+!s100 WL>B6eKYm^KJ44Wa7Sg711
+R3
+IRYIGOcEb[a]=E7;W3z[A91
+R4
+S1
+R0
+w1769209842
+8rtl/display_controller.sv
+Frtl/display_controller.sv
+!i122 0
+L0 1 89
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+vstopwatch_core
+R1
+R2
+!i10b 1
+!s100 Cl`PV;b26z98TI4Xbh^0H2
+R3
+I?HoffS64TLh^;nf=ESVLg0
+R4
+S1
+R0
+w1769209843
+8rtl/stopwatch_core.sv
+Frtl/stopwatch_core.sv
+!i122 0
+L0 11 235
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+vtb_stopwatch
+R1
+R2
+!i10b 1
+!s100 ;mQV2K9B:`DiJW?ElV[o71
+R3
+Ifg86_N5bP2HVodh=S5KH?0
+R4
+S1
+R0
+w1769195267
+8tb/tb_stopwatch.sv
+Ftb/tb_stopwatch.sv
+!i122 1
+L0 3 90
+R5
+r1
+!s85 0
+31
+R6
+!s107 tb/tb_stopwatch.sv|
+!s90 -work|work|tb/tb_stopwatch.sv|
+!i113 1
+R9
+R10
+vtop
+R1
+R2
+!i10b 1
+!s100 G4j[TZ]_bd5jWCa<j1g`50
+R3
+Ih2=`zUf<6i[JDaB`T@?Yf1
+R4
+S1
+R0
+w1769209859
+8rtl/top.sv
+Frtl/top.sv
+!i122 0
+L0 1 43
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
