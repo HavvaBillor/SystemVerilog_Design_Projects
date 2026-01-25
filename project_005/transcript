@@ -1,29 +1,74 @@
-# ERROR: No extended dataflow license exists
-# vsim -work work tb_pwm 
-# Start time: 14:17:30 on Jan 25,2026
+# vsim -c -work work tb_led_controller -do "vcd file wave.vcd; vcd add -r /*; run -all; quit" 
+# Start time: 17:21:03 on Jan 25,2026
 # Loading sv_std.std
-# Loading work.tb_pwm
+# Loading work.tb_led_controller
+# Loading work.led_controller
+# Loading work.debounce
 # Loading work.pwm_gen
-add wave -position insertpoint  \
-sim:/tb_pwm/CLK_PERIOD \
-sim:/tb_pwm/PWM_FREQ \
-sim:/tb_pwm/PWM_PERIOD_NS \
-sim:/tb_pwm/clk \
-sim:/tb_pwm/rst_n \
-sim:/tb_pwm/duty_cycle \
-sim:/tb_pwm/pwm_out
-run -all
-# Testing 25% duty cycle...
-# Testing 50% duty cycle...
-# Testing 75% duty cycle...
-# Testing 100% and above duty cycle...
-# Testing 100% duty cycle...
-# Testing 110% duty cycle...
-# ** Note: $finish    : tb/tb_pwm.sv(63)
-#    Time: 25000100 ns  Iteration: 0  Instance: /tb_pwm
-# 1
-# Break in Module tb_pwm at tb/tb_pwm.sv line 63
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/subat/SystemVerilog_Projects/project_005/wave.do
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/subat/SystemVerilog_Projects/project_005/wave.do
-# End time: 14:19:36 on Jan 25,2026, Elapsed time: 0:02:06
+# vcd file wave.vcd
+#  vcd add -r /*
+#  run -all
+# ** Info: INFO: --- Simulation Started ---
+#    Time: 0 ps  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 39
+# ** Info: INFO: Manuel mode is started after hardware reset!
+#    Time: 100200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 52
+# ** Info: INFO: UP button is pressed...
+#    Time: 100200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 0 UP Time:12300200000 Manuel Duty: 20
+#    Time: 12300200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 57
+# ** Info: INFO: UP button is pressed...
+#    Time: 12300200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 1 UP Time:24500200000 Manuel Duty: 40
+#    Time: 24500200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 57
+# ** Info: INFO: UP button is pressed...
+#    Time: 24500200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 2 UP Time:36700200000 Manuel Duty: 60
+#    Time: 36700200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 57
+# ** Info: INFO: UP button is pressed...
+#    Time: 36700200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 3 UP Time:48900200000 Manuel Duty: 80
+#    Time: 48900200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 57
+# ** Info: INFO: UP button is pressed...
+#    Time: 48900200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 4 UP Time:61100200000 Manuel Duty: 100
+#    Time: 61100200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 57
+# ** Info: INFO: UP button is pressed...
+#    Time: 61100200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 5.UP Time:73300200000 Manuel Duty: 100
+#    Time: 73300200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 62
+# ** Info: INFO: DOWN button is pressed...
+#    Time: 73300200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 0.DOWN Time:85500200000 Manuel Duty: 80
+#    Time: 85500200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 67
+# ** Info: INFO: DOWN button is pressed...
+#    Time: 85500200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 1.DOWN Time:97700200000 Manuel Duty: 60
+#    Time: 97700200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 67
+# ** Info: INFO: DOWN button is pressed...
+#    Time: 97700200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 2.DOWN Time:109900200000 Manuel Duty: 40
+#    Time: 109900200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 67
+# ** Info: INFO: DOWN button is pressed...
+#    Time: 109900200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 3.DOWN Time:122100200000 Manuel Duty: 20
+#    Time: 122100200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 67
+# ** Info: INFO: DOWN button is pressed...
+#    Time: 122100200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 4.DOWN Time:134300200000 Manuel Duty: 0
+#    Time: 134300200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 67
+# ** Info: INFO: DOWN button is pressed...
+#    Time: 134300200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: 5.DOWN Time:146500200000 Manuel Duty: 0
+#    Time: 146500200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 72
+# ** Info: INFO: MODE button is pressed...
+#    Time: 146500200 ns  Scope: tb_led_controller.push_button File: tb/tb_led_controller.sv Line: 30
+# ** Info: INFO: AUTO Mode is on
+#    Time: 158700200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 77
+# ** Info: INFO: Waiting the breathing effect!
+#    Time: 158700200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 80
+# ** Info: INFO: --- Simulation Finished ---
+#    Time: 178700200 ns  Scope: tb_led_controller File: tb/tb_led_controller.sv Line: 83
+# ** Note: $finish    : tb/tb_led_controller.sv(84)
+#    Time: 178700200 ns  Iteration: 0  Instance: /tb_led_controller
+# End time: 17:23:16 on Jan 25,2026, Elapsed time: 0:02:13
 # Errors: 0, Warnings: 0

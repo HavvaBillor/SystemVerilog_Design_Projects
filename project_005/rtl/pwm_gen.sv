@@ -17,11 +17,11 @@ module pwm_gen #(
 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-      counter <= 32'd0;
+      counter <= '0;
     end else begin
       // timer counter
       if (counter >= PERIOD - 1) begin
-        counter <= 32'd0;
+        counter <= '0;
       end else begin
         counter <= counter + 1;
       end
