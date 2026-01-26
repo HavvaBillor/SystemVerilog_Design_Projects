@@ -118,6 +118,8 @@ module shift_fifo #(
 
 endmodule
 
+// WRAP AROUND 2^n fifo depth !!!
+
 module wrap_around_fifo #(
     parameter FIFO_DEPTH = 4,
     parameter DATA_WIDTH = 8
