@@ -134,7 +134,7 @@ module tb_sync_fifo;
 
 endmodule
 
-// counter based, shift fifo and wrap around fifo
+// counter based and  shift fifo 
 /*
 # ** Info: --- TEST SCENARIO IS STARTED ---
 #    Time: 120 ns  Scope: tb_counter_based_fifo File: tb/tb_counter_based_fifo.sv Line: 92
