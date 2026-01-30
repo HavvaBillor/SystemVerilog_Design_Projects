@@ -1,0 +1,42 @@
+# vsim -c -work work tb_traffic_controller -do "run -all; quit" 
+# Start time: 10:52:11 on Jan 30,2026
+# Loading sv_std.std
+# Loading work.tb_traffic_controller
+# Loading work.top
+# Loading work.traffic_light_core
+# Loading work.timer_controller
+# Loading work.debounce
+# Loading work.display_controller
+# Loading work.pwm_gen
+# Loading work.bcd_to_sevenseg
+# run -all
+# ** Info: INFO: Simulation is started!
+#    Time: 110 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 57
+# ** Info: INFO: Traffic light simulation is started with GREEN light!
+#    Time: 110 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 59
+# ** Info: INFO:  OK: at GREEN_START phase verificated. BCD: 20
+#    Time: 110 ns  Scope: tb_traffic_controller.check_status File: tb/tb_traffic_controller.sv Line: 46
+# ** Info: INFO:  OK: at YELLOW phase verificated. BCD: 5
+#    Time: 40130 ns  Scope: tb_traffic_controller.check_status File: tb/tb_traffic_controller.sv Line: 46
+# ** Info: INFO:  OK: at RED phase verificated. BCD: 15
+#    Time: 50130 ns  Scope: tb_traffic_controller.check_status File: tb/tb_traffic_controller.sv Line: 46
+# ** Info: INFO:  OK: at GREEN_LOOP_BACK phase verificated. BCD: 20
+#    Time: 80130 ns  Scope: tb_traffic_controller.check_status File: tb/tb_traffic_controller.sv Line: 46
+# ** Info: INFO: ---------------------- Pedestiran has come ----------------------
+#    Time: 80130 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 70
+# ** Info: INFO:  Button is pressed...
+#    Time: 90110 ns  Scope: tb_traffic_controller.push_button File: tb/tb_traffic_controller.sv Line: 33
+# ** Info: INFO: [Scenario 1] Passed. BCD decreased to 10 and jumped to YELLOW. Current BCD: 10
+#    Time: 100110 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 78
+# ** Info: INFO: New Green cycle started, waiting for BCD < 10...
+#    Time: 140130 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 84
+# ** Info: INFO:  Button is pressed...
+#    Time: 164110 ns  Scope: tb_traffic_controller.push_button File: tb/tb_traffic_controller.sv Line: 33
+# ** Info: INFO: [Scenario 2] Passed. System successfully jumped to YELLOW light. BCD: 3
+#    Time: 168550 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 91
+# ** Info: INFO: ---------------------- ALL TEST FINISHED ----------------------
+#    Time: 168550 ns  Scope: tb_traffic_controller File: tb/tb_traffic_controller.sv Line: 97
+# ** Note: $finish    : tb/tb_traffic_controller.sv(98)
+#    Time: 168550 ns  Iteration: 1  Instance: /tb_traffic_controller
+# End time: 10:52:12 on Jan 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
