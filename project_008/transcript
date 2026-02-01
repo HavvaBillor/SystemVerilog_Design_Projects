@@ -1,5 +1,5 @@
 # vsim -c -work work tb_uart_tx -do "run -all; quit" 
-# Start time: 17:40:23 on Jan 30,2026
+# Start time: 13:21:51 on Feb 01,2026
 # Loading sv_std.std
 # Loading work.tb_uart_tx
 # Loading work.uart_tx
@@ -102,5 +102,5 @@
 # INFO: All data transmitted! Verification is completed successfully!
 # ** Note: $finish    : tb/tb_uart_tx.sv(97)
 #    Time: 173840 ns  Iteration: 0  Instance: /tb_uart_tx
-# End time: 17:40:24 on Jan 30,2026, Elapsed time: 0:00:01
+# End time: 13:21:52 on Feb 01,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

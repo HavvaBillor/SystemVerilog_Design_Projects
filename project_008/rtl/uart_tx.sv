@@ -7,16 +7,16 @@ PRESCALER(DIVISOR) = 50_000_000 /(16* 115_200) = 27.12 ~ 27
 */
 
 module uart_tx #(
-    parameter CLK_FREQ   = 50_000_000,
-    parameter BAUD_RATE  = 115_200,
-    parameter DATA_WIDTH = 8,
+    parameter CLK_FREQ = 50_000_000,
+    parameter BAUD_RATE = 115_200,
+    parameter DATA_WIDTH = 8,  // in my design, it should be 2^n
     parameter FIFO_DEPTH = 16
 ) (
     input logic clk_i,
     input logic rst_ni,
     input logic tx_en_i,  // communication enable
     input logic tx_wen_i,  // write enable
-    input logic [7:0] din_i,  // 8 bit data input
+    input logic [DATA_WIDTH -1:0] din_i,  // data_width bit data input
     output logic empty_o,
     output logic full_o,
     output logic tx_bit_o
@@ -25,12 +25,13 @@ module uart_tx #(
 
   localparam BAUD_DIV = (CLK_FREQ / BAUD_RATE);  // tx sends the data with 16 sampling rate
   localparam int N = $clog2(BAUD_DIV);
+  localparam int M = $clog2(DATA_WIDTH);
 
-  logic [N-1:0] baud_counter;
-  logic [  3:0] bit_counter;
-  logic [  7:0] data_reg;  // 
-  logic         rd_en;
-  logic [  7:0] r_data;
+  logic [          N-1:0] baud_counter;
+  logic [          M-1:0] bit_counter;
+  logic [DATA_WIDTH -1:0] data_reg;
+  logic                   rd_en;
+  logic [            7:0] r_data;
 
   // fifo inst
   wrap_around_fifo #(

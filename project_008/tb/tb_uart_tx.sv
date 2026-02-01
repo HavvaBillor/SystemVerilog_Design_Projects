@@ -12,14 +12,14 @@ module tb_uart_tx #(
   localparam BAUD_CLK_PERIOD = BAUD_DIV * CLK_PERIOD;
 
 
-  logic       clk_i;
-  logic       rst_ni;
-  logic       tx_en_i;
-  logic       tx_wen_i;
-  logic [7:0] din_i;
-  logic       empty_o;
-  logic       full_o;
-  logic       tx_bit_o;
+  logic                  clk_i;
+  logic                  rst_ni;
+  logic                  tx_en_i;
+  logic                  tx_wen_i;
+  logic [DATA_WIDTH-1:0] din_i;
+  logic                  empty_o;
+  logic                  full_o;
+  logic                  tx_bit_o;
 
 
   uart_tx #(
@@ -31,9 +31,9 @@ module tb_uart_tx #(
       .*
   );
 
-  logic [7:0] test_data_array[] = {'h1, 'h9, 'h0, 'h7};
-  logic [3:0] bit_counter;
-  logic [9:0] expected_frame;
+  logic [DATA_WIDTH-1:0] test_data_array[] = {'h1, 'h9, 'h0, 'h7};
+  logic [           3:0] bit_counter;
+  logic [           9:0] expected_frame;
 
   initial clk_i = '0;
   always #(CLK_PERIOD / 2) clk_i = ~clk_i;
@@ -101,3 +101,107 @@ module tb_uart_tx #(
 
 
 endmodule
+
+/*
+# INFO: Writing data to FIFO 
+# Writing data 1 to FIFO
+# Writing data 9 to FIFO
+# Writing data 0 to FIFO
+# Writing data 7 to FIFO
+# INFO: TX enabling and starting transmission 
+# INFO: Testing start bit
+# ** Info: INFO: TX bit verification successful. Bit 0 is 0
+#    Time: 110 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 1 is 1
+#    Time: 4450 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 2 is 0
+#    Time: 8790 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 3 is 0
+#    Time: 13130 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 4 is 0
+#    Time: 17470 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 5 is 0
+#    Time: 21810 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 6 is 0
+#    Time: 26150 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 7 is 0
+#    Time: 30490 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 8 is 0
+#    Time: 34830 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing stop bit
+# ** Info: INFO: TX bit verification successful. Bit 9 is 1
+#    Time: 39170 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing start bit
+# ** Info: INFO: TX bit verification successful. Bit 0 is 0
+#    Time: 43520 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 1 is 1
+#    Time: 47860 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 2 is 0
+#    Time: 52200 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 3 is 0
+#    Time: 56540 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 4 is 1
+#    Time: 60880 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 5 is 0
+#    Time: 65220 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 6 is 0
+#    Time: 69560 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 7 is 0
+#    Time: 73900 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 8 is 0
+#    Time: 78240 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing stop bit
+# ** Info: INFO: TX bit verification successful. Bit 9 is 1
+#    Time: 82580 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing start bit
+# ** Info: INFO: TX bit verification successful. Bit 0 is 0
+#    Time: 86930 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 1 is 0
+#    Time: 91270 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 2 is 0
+#    Time: 95610 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 3 is 0
+#    Time: 99950 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 4 is 0
+#    Time: 104290 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 5 is 0
+#    Time: 108630 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 6 is 0
+#    Time: 112970 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 7 is 0
+#    Time: 117310 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 8 is 0
+#    Time: 121650 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing stop bit
+# ** Info: INFO: TX bit verification successful. Bit 9 is 1
+#    Time: 125990 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing start bit
+# ** Info: INFO: TX bit verification successful. Bit 0 is 0
+#    Time: 130340 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 1 is 1
+#    Time: 134680 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 2 is 1
+#    Time: 139020 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 3 is 1
+#    Time: 143360 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 4 is 0
+#    Time: 147700 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 5 is 0
+#    Time: 152040 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 6 is 0
+#    Time: 156380 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 7 is 0
+#    Time: 160720 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# ** Info: INFO: TX bit verification successful. Bit 8 is 0
+#    Time: 165060 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: Testing stop bit
+# ** Info: INFO: TX bit verification successful. Bit 9 is 1
+#    Time: 169400 ns  Scope: tb_uart_tx.verifying_tx_bit File: tb/tb_uart_tx.sv Line: 55
+# INFO: All data transmitted! Verification is completed successfully!
+# ** Note: $finish    : tb/tb_uart_tx.sv(97)
+#    Time: 173840 ns  Iteration: 0  Instance: /tb_uart_tx
+# End time: 13:16:00 on Feb 01,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+[✓] Batch simulation completed
+
+*/
