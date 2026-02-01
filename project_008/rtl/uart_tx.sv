@@ -7,9 +7,9 @@ PRESCALER(DIVISOR) = 50_000_000 /(16* 115_200) = 27.12 ~ 27
 */
 
 module uart_tx #(
-    parameter CLK_FREQ = 50_000_000,
-    parameter BAUD_RATE = 115_200,
-    parameter DATA_WIDTH = 8,  // in my design, it should be 2^n
+    parameter CLK_FREQ   = 50_000_000,
+    parameter BAUD_RATE  = 115_200,
+    parameter DATA_WIDTH = 8,
     parameter FIFO_DEPTH = 16
 ) (
     input logic clk_i,
@@ -24,14 +24,14 @@ module uart_tx #(
 );
 
   localparam BAUD_DIV = (CLK_FREQ / BAUD_RATE);  // tx sends the data with 16 sampling rate
-  localparam int N = $clog2(BAUD_DIV);
-  localparam int M = $clog2(DATA_WIDTH);
+  localparam int BAUD_COUNTER = $clog2(BAUD_DIV);
+  localparam int DATA_COUNTER = $clog2(DATA_WIDTH + 1);
 
-  logic [          N-1:0] baud_counter;
-  logic [          M-1:0] bit_counter;
-  logic [DATA_WIDTH -1:0] data_reg;
-  logic                   rd_en;
-  logic [            7:0] r_data;
+  logic [BAUD_COUNTER-1:0] baud_counter;
+  logic [DATA_COUNTER-1:0] bit_counter;
+  logic [ DATA_WIDTH -1:0] data_reg;
+  logic                    rd_en;
+  logic [             7:0] r_data;
 
   // fifo inst
   wrap_around_fifo #(
@@ -77,7 +77,7 @@ module uart_tx #(
       end
       SEND_DATA: begin
         // send data and if you sent 8bit jump to send_stop
-        if ((baud_counter == BAUD_DIV - 1) && (bit_counter == 7)) begin
+        if ((baud_counter == BAUD_DIV - 1) && (bit_counter == DATA_WIDTH - 1)) begin
           next_state = SEND_STOP;
         end
       end
@@ -135,7 +135,7 @@ module uart_tx #(
             data_reg <= r_data;  // observe the fifo module 
           end
           SEND_DATA: begin
-            if (bit_counter == 7) begin
+            if (bit_counter == DATA_WIDTH - 1) begin
               bit_counter <= '0;
             end else begin
               bit_counter <= bit_counter + 1;

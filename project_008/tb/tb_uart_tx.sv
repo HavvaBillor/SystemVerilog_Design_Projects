@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
 module tb_uart_tx #(
-    parameter CLK_FREQ = 50_000_000,
-    parameter BAUD_RATE = 115_200,
+    parameter CLK_FREQ   = 50_000_000,
+    parameter BAUD_RATE  = 115_200,
     parameter DATA_WIDTH = 8,
-    parameter FIFO_DEPTH = 16,  // adrr 4, 2^4 =16 fifo_depth
+    parameter FIFO_DEPTH = 16,
     parameter CLK_PERIOD = 10
 );
 

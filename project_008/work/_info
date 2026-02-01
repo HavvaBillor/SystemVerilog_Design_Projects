@@ -11,7 +11,7 @@ cModel Technology
 Z0 d/home/subat/SystemVerilog_Projects/project_008
 vcounter_based_fifo
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1769941310
+Z2 !s110 1769957707
 !i10b 1
 !s100 Ql[C^ci0TZ@VF16IhdP9>1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ R0
 Z5 w1769771187
 Z6 8rtl/fifo.sv
 Z7 Frtl/fifo.sv
-!i122 14
+!i122 0
 L0 5 58
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1769941310.000000
+Z9 !s108 1769957707.000000
 Z10 !s107 rtl/uart_tx.sv|rtl/uart_rx.sv|rtl/fifo.sv|
 Z11 !s90 -work|work|rtl/fifo.sv|rtl/uart_rx.sv|rtl/uart_tx.sv|
 !i113 1
@@ -47,7 +47,7 @@ R0
 R5
 R6
 R7
-!i122 14
+!i122 0
 L0 65 55
 R8
 r1
@@ -59,28 +59,53 @@ R11
 !i113 1
 R12
 R13
-vtb_uart_tx
+vtb_uart_rx
 R1
 R2
 !i10b 1
-!s100 _TUlZZT:YP`j9^PNZV>_V0
+!s100 7I6>]nHMB5hA4=d?Um<;L2
 R3
-I<0b?M>X34H[lTmiG5:KBK1
+IcC7_JHLFVXjjThA^WQGhd2
 R4
 S1
 R0
-w1769941024
-8tb/tb_uart_tx.sv
-Ftb/tb_uart_tx.sv
-!i122 15
-L0 3 101
+w1769957683
+8tb/tb_uart_rx.sv
+Ftb/tb_uart_rx.sv
+!i122 1
+L0 3 126
 R8
 r1
 !s85 0
 31
 R9
-!s107 tb/tb_uart_tx.sv|
-!s90 -work|work|tb/tb_uart_tx.sv|
+!s107 tb/tb_uart_rx.sv|
+!s90 -work|work|tb/tb_uart_rx.sv|
+!i113 1
+R12
+R13
+vuart_rx
+R1
+R2
+!i10b 1
+!s100 ]1zm=6hijDdfi7<Qn_G<;0
+R3
+IjVN^8fW[m=89OkW4;znnI0
+R4
+S1
+R0
+w1769957680
+8rtl/uart_rx.sv
+Frtl/uart_rx.sv
+!i122 0
+L0 9 135
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
 !i113 1
 R12
 R13
@@ -88,16 +113,16 @@ vuart_tx
 R1
 R2
 !i10b 1
-!s100 VN;zmIN1R=78BJ2eJSkoL3
+!s100 a<3LQDN@]T^4LnCROlCaU1
 R3
-I]oMoF67NhAaA6Q]MoUU@52
+ISgIdFABT7cNTS>oZZ]nj<0
 R4
 S1
 R0
-w1769941304
+w1769957678
 8rtl/uart_tx.sv
 Frtl/uart_tx.sv
-!i122 14
+!i122 0
 L0 9 144
 R8
 r1
@@ -122,7 +147,7 @@ R0
 R5
 R6
 R7
-!i122 14
+!i122 0
 L0 123 50
 R8
 r1
