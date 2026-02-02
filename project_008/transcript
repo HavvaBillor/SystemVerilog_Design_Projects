@@ -1,89 +1,21 @@
-# vsim -c -work work tb_uart -do "run -all; quit" 
-# Start time: 14:10:41 on Feb 02,2026
+# vsim -c -work work tb_led_uart -do "run -all; quit" 
+# Start time: 16:31:57 on Feb 02,2026
 # Loading sv_std.std
-# Loading work.tb_uart
-# Loading work.uart
+# Loading work.tb_led_uart
+# Loading work.led_ctrl_uart
 # Loading work.uart_tx
 # Loading work.wrap_around_fifo
 # Loading work.uart_rx
 # run -all
-# ** Info: INFO: Setting UART baud rate. Divisor: 434
-#    Time: 190 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 81
-# ** Info: INFO: Enabling UART TX and RX.
-#    Time: 210 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 85
-# ** Info: INFO: Starting random data transmission test.
-#    Time: 230 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 89
-# ** Info: INFO: Data written to TX FIFO: 0x74. TX queue size: 1
-#    Time: 290 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x62. TX queue size: 2
-#    Time: 370 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x6. TX queue size: 3
-#    Time: 450 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x7f. TX queue size: 4
-#    Time: 530 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x82. TX queue size: 5
-#    Time: 610 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0xbc. TX queue size: 6
-#    Time: 690 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0xf0. TX queue size: 7
-#    Time: 770 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x6d. TX queue size: 8
-#    Time: 850 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x37. TX queue size: 9
-#    Time: 930 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0xec. TX queue size: 10
-#    Time: 1010 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x9. TX queue size: 11
-#    Time: 1090 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x5f. TX queue size: 12
-#    Time: 1170 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x7f. TX queue size: 13
-#    Time: 1250 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x86. TX queue size: 14
-#    Time: 1330 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0xbf. TX queue size: 15
-#    Time: 1410 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: Data written to TX FIFO: 0x13. TX queue size: 16
-#    Time: 1490 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 110
-# ** Info: INFO: TX FIFO is full. Waiting for data to be received.
-#    Time: 1510 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 115
-# ** Info: INFO: Data verified. Received: 0x74, Expected: 0x74
-#    Time: 2001590 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x62, Expected: 0x62
-#    Time: 2001670 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x6, Expected: 0x6
-#    Time: 2001750 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x7f, Expected: 0x7f
-#    Time: 2001830 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x82, Expected: 0x82
-#    Time: 2001910 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0xbc, Expected: 0xbc
-#    Time: 2001990 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0xf0, Expected: 0xf0
-#    Time: 2002070 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x6d, Expected: 0x6d
-#    Time: 2002150 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x37, Expected: 0x37
-#    Time: 2002230 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0xec, Expected: 0xec
-#    Time: 2002310 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x9, Expected: 0x9
-#    Time: 2002390 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x5f, Expected: 0x5f
-#    Time: 2002470 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x7f, Expected: 0x7f
-#    Time: 2002550 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x86, Expected: 0x86
-#    Time: 2002630 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0xbf, Expected: 0xbf
-#    Time: 2002710 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: Data verified. Received: 0x13, Expected: 0x13
-#    Time: 2002790 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 146
-# ** Info: INFO: All data transmitted, received, and verified successfully.
-#    Time: 2002790 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 152
-# ** Info: INFO: Test PASSED!
-#    Time: 2002790 ns  Scope: tb_uart File: tb/tb_uart.sv Line: 153
-# ** Note: $finish    : tb/tb_uart.sv(154)
-#    Time: 2002790 ns  Iteration: 1  Instance: /tb_uart
-# End time: 14:10:43 on Feb 02,2026, Elapsed time: 0:00:02
+# ** Info: INFO: Test simulation is started!
+#    Time: 290 ns  Scope: tb_led_uart File: tb/tb_led_uart.sv Line: 59
+# INFO: Sending byte 41
+# INFO: Data 8'h41 received! Led: 0001
+# INFO: Sending byte 49
+# INFO: Data 8'h49 received! Led: 1001
+# ** Info: INFO: Test simulation is finished successfully!
+#    Time: 191360 ns  Scope: tb_led_uart File: tb/tb_led_uart.sv Line: 78
+# ** Note: $finish    : tb/tb_led_uart.sv(79)
+#    Time: 191360 ns  Iteration: 0  Instance: /tb_led_uart
+# End time: 16:31:58 on Feb 02,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

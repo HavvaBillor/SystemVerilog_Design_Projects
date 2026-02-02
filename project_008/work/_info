@@ -11,7 +11,7 @@ cModel Technology
 Z0 d/home/subat/SystemVerilog_Projects/project_008
 vcounter_based_fifo
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1770030641
+Z2 !s110 1770039116
 !i10b 1
 !s100 Ql[C^ci0TZ@VF16IhdP9>1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,18 +22,43 @@ R0
 Z5 w1769771187
 Z6 8rtl/fifo.sv
 Z7 Frtl/fifo.sv
-!i122 0
+!i122 14
 L0 5 58
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1770030641.000000
-Z10 !s107 rtl/uart_tx.sv|rtl/uart_rx.sv|rtl/uart.sv|rtl/fifo.sv|
-Z11 !s90 -work|work|rtl/fifo.sv|rtl/uart.sv|rtl/uart_rx.sv|rtl/uart_tx.sv|
+Z9 !s108 1770039116.000000
+Z10 !s107 rtl/uart_tx.sv|rtl/uart_rx.sv|rtl/uart.sv|rtl/led_ctrl_uart.sv|rtl/fifo.sv|
+Z11 !s90 -work|work|rtl/fifo.sv|rtl/led_ctrl_uart.sv|rtl/uart.sv|rtl/uart_rx.sv|rtl/uart_tx.sv|
 !i113 1
 Z12 o-work work
 Z13 tCvgOpt 0
+vled_ctrl_uart
+R1
+R2
+!i10b 1
+!s100 el^7HbP=]_nU;P[[j10D[3
+R3
+IDckfKBRE<KgnTO21TU?_P0
+R4
+S1
+R0
+w1770039073
+8rtl/led_ctrl_uart.sv
+Frtl/led_ctrl_uart.sv
+!i122 14
+L0 1 76
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
 vshift_fifo
 R1
 R2
@@ -47,7 +72,7 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 14
 L0 65 55
 R8
 r1
@@ -59,9 +84,34 @@ R11
 !i113 1
 R12
 R13
-vtb_uart
+vtb_led_uart
 R1
 R2
+!i10b 1
+!s100 1Q7m5U2D=z=c1?blSEY9a0
+R3
+I2:eBB;7YP[oj8dI6e[K=?0
+R4
+S1
+R0
+w1770039113
+8tb/tb_led_uart.sv
+Ftb/tb_led_uart.sv
+!i122 15
+L0 2 82
+R8
+r1
+!s85 0
+31
+R9
+!s107 tb/tb_led_uart.sv|
+!s90 -work|work|tb/tb_led_uart.sv|
+!i113 1
+R12
+R13
+vtb_uart
+R1
+!s110 1770030641
 !i10b 1
 !s100 KG7ShmcXngJ_G9[ec:o_i1
 R3
@@ -78,7 +128,7 @@ R8
 r1
 !s85 0
 31
-R9
+!s108 1770030641.000000
 !s107 tb/tb_uart.sv|
 !s90 -work|work|tb/tb_uart.sv|
 !i113 1
@@ -97,7 +147,7 @@ R0
 w1769973794
 8rtl/uart.sv
 Frtl/uart.sv
-!i122 0
+!i122 14
 L0 2 130
 R8
 r1
@@ -122,7 +172,7 @@ R0
 w1769957873
 8rtl/uart_rx.sv
 Frtl/uart_rx.sv
-!i122 0
+!i122 14
 L0 9 135
 R8
 r1
@@ -147,7 +197,7 @@ R0
 w1769957678
 8rtl/uart_tx.sv
 Frtl/uart_tx.sv
-!i122 0
+!i122 14
 L0 9 144
 R8
 r1
@@ -172,7 +222,7 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 14
 L0 123 50
 R8
 r1
