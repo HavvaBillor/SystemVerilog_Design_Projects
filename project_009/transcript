@@ -1,0 +1,14 @@
+# vsim -c -work work tb_bin_to_bcd -do "run -all; quit" 
+# Start time: 15:43:46 on Feb 03,2026
+# Loading sv_std.std
+# Loading work.tb_bin_to_bcd
+# Loading work.bin_to_bcd
+# run -all
+# --- BCD Testi Basliyor ---
+# Input:   256 | BCD: 0256 (Beklenen: 0256)
+# Input:  1234 | BCD: 1234 (Beklenen: 1234)
+# Input:  4995 | BCD: 4995 (Beklenen: 4995)
+# ** Note: $finish    : tb/tb_bin_to_bcd.sv(30)
+#    Time: 40 ns  Iteration: 0  Instance: /tb_bin_to_bcd
+# End time: 15:43:47 on Feb 03,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
